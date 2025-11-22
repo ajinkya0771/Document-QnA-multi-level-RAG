@@ -1,5 +1,9 @@
 📄 Project 1 — Document Q&A System (Basic RAG with Local Embeddings)
 
+## 🏗 Architecture Diagram (Project 1)
+
+[Basic RAG Architecture](project-basic-rag/screenshots/RAG_architecture.png)
+
 This project is a fully local Document Question-Answering system built using LlamaIndex, HuggingFace embedding models, and Gradio.
 It demonstrates how to:
 
