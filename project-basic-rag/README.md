@@ -67,13 +67,11 @@ Pure retrieval-based answering, making it:
 ### 🔹 5. Dockerized  
 Can be built and run anywhere:
 
-```sh
 docker build -t doc-qa-basic .
 docker run -p 7860:7860 doc-qa-basic
 
 ## Project Structure
-
-``project-basic-rag/``  
+  
 project-basic-rag/
 ├── app.py
 ├── Dockerfile
@@ -87,10 +85,6 @@ project-basic-rag/
 ├── 04-query-and-answer.png
 └── RAG_architecture.png
 
-yaml
-Copy code
-
----
 
 ## Screenshots
 
@@ -101,27 +95,23 @@ Copy code
 | 📌 **Index Confirmation** | ![Indexed](screenshots/03-indexed-status.png) |
 | ❓ **Query & Final Answer** | ![Answer](screenshots/04-query-and-answer.png) |
 
----
 
 ## How to Run
 
 ### 1️⃣ Install Dependencies
-```bash
 pip install -r requirements.txt
 2️⃣ Start the App
-bash
-Copy code
 python app.py
 Then open:
 
 👉 http://localhost:7860
 
 3️⃣ Run Using Docker
-bash
-Copy code
 docker build -t doc-qa-basic .
 docker run -p 7860:7860 doc-qa-basic
-How It Works
+
+
+## How It Works
 Upload Document → LlamaIndex reads the file
 
 Embed Document → Convert text to vectors using BGE-small
@@ -134,9 +124,8 @@ Similarity Search → Retrieves best matching chunks
 
 Answer Returned → Pure retrieval (no LLM used)
 
-Purpose of This Project
-This project is designed to help you:
-
+## Purpose of This Project
+This project is designed to help to
 Understand and implement RAG systems
 
 Learn vector embeddings & similarity search
