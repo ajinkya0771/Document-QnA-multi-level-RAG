@@ -13,7 +13,7 @@
 ## 📑 Table of Contents
 
 - [Introduction](#introduction)
-- [Architecture Diagram (Project 1)](#-architecture-diagram-project-1)
+- [Architecture Diagram (Project 1)](#architecture-diagram-project-1)
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Screenshots](#screenshots)
@@ -36,7 +36,7 @@ It demonstrates a complete offline RAG workflow.
 
 ---
 
-## 🧱 Architecture Diagram (Project 1)
+## Architecture Diagram (Project 1)
 
 ![Basic RAG Architecture](./screenshots/RAG_architecture.png)
 
@@ -71,3 +71,80 @@ Can be built and run anywhere:
 docker build -t doc-qa-basic .
 docker run -p 7860:7860 doc-qa-basic
 
+## Project Structure
+
+``project-basic-rag/``  
+project-basic-rag/
+├── app.py
+├── Dockerfile
+├── requirements.txt
+├── README.md
+├── docs/
+└── screenshots/
+├── 01-folder-structure.png
+├── 02-index-document.png
+├── 03-indexed-status.png
+├── 04-query-and-answer.png
+└── RAG_architecture.png
+
+yaml
+Copy code
+
+---
+
+## Screenshots
+
+| Step                       | Image |
+|---------------------------|--------|
+| 📁 **Project Structure**  | ![Folder](screenshots/01-folder-structure.png) |
+| 📤 **Document Upload & Index** | ![Index](screenshots/02-index-document.png) |
+| 📌 **Index Confirmation** | ![Indexed](screenshots/03-indexed-status.png) |
+| ❓ **Query & Final Answer** | ![Answer](screenshots/04-query-and-answer.png) |
+
+---
+
+## How to Run
+
+### 1️⃣ Install Dependencies
+```bash
+pip install -r requirements.txt
+2️⃣ Start the App
+bash
+Copy code
+python app.py
+Then open:
+
+👉 http://localhost:7860
+
+3️⃣ Run Using Docker
+bash
+Copy code
+docker build -t doc-qa-basic .
+docker run -p 7860:7860 doc-qa-basic
+How It Works
+Upload Document → LlamaIndex reads the file
+
+Embed Document → Convert text to vectors using BGE-small
+
+Store in Vector Index → Enables similarity search
+
+User Query → Query is embedded
+
+Similarity Search → Retrieves best matching chunks
+
+Answer Returned → Pure retrieval (no LLM used)
+
+Purpose of This Project
+This project is designed to help you:
+
+Understand and implement RAG systems
+
+Learn vector embeddings & similarity search
+
+Build offline, private Q&A pipelines
+
+Prepare for advanced RAG projects (metadata, reranking, hybrid retrieval)
+
+Strengthen your AI/ML, Data Engineering, and GenAI portfolio
+
+Ideal for a fresher showcasing real hands-on RAG experience.
