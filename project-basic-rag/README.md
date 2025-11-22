@@ -70,8 +70,10 @@ Can be built and run anywhere:
 docker build -t doc-qa-basic .
 docker run -p 7860:7860 doc-qa-basic
 
+
 ## Project Structure
-  
+
+
 project-basic-rag/
 ├── app.py
 ├── Dockerfile
@@ -79,11 +81,11 @@ project-basic-rag/
 ├── README.md
 ├── docs/
 └── screenshots/
-├── 01-folder-structure.png
-├── 02-index-document.png
-├── 03-indexed-status.png
-├── 04-query-and-answer.png
-└── RAG_architecture.png
+    ├── 01-folder-structure.png
+    ├── 02-index-document.png
+    ├── 03-indexed-status.png
+    ├── 04-query-and-answer.png
+    └── RAG_architecture.png
 
 
 ## Screenshots
