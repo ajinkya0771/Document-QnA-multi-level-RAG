@@ -10,9 +10,6 @@ This repo is designed to showcase:
 - Clean, documented, resume-ready project structure
 
 
-![Basic RAG Architecture](screenshots/RAG_architecture.png)
-
-
 ## 🧑‍💻 Maintainer
 
 Ajinkya Dhote  
