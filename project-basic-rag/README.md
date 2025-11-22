@@ -2,8 +2,7 @@
 
 ## 🧱 Architecture Diagram (Project 1)
 
-[Basic RAG Architecture](project-basic-rag/screenshots/RAG_architecture.png)
-
+<img width="1536" height="1024" alt="RAG_architecture" src="https://github.com/user-attachments/assets/01cd4569-7cc6-4f4b-8ddc-0c7d734c5291" />
 
 This project is a fully local Document Question-Answering system built using LlamaIndex, HuggingFace embedding models, and Gradio.
 It demonstrates how to:
