@@ -22,6 +22,8 @@ It demonstrates how to:
 This is the first project in my multi-level RAG (Retrieval-Augmented Generation) series, starting from basics and moving toward advanced RAG pipelines.
 
 🚀 Features
+
+
 🔹 1. Local Embedding-Based Search
 
 Uses the BAAI/bge-small-en-v1.5 embedding model from HuggingFace, running completely offline.
