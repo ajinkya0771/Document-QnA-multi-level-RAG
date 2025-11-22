@@ -1,72 +1,71 @@
 📄 Project 1 — Document Q&A System (Basic RAG with Local Embeddings)
 
-## 🧱 Architecture Diagram (Project 1)
 
-<img width="1536" height="1024" alt="RAG_architecture" src="https://github.com/user-attachments/assets/01cd4569-7cc6-4f4b-8ddc-0c7d734c5291" />
 
-This project is a fully local Document Question-Answering system built using LlamaIndex, HuggingFace embedding models, and Gradio.
-It demonstrates how to:
+<img width="1536" height="1024" alt="RAG_architecture" src="https://github.com/user-attachments/assets/2954d8d5-a90a-4b20-93af-b152053bf412" />
 
-📥 Upload and index documents
+                                                    [⚙️ Basic RAG Architecture]
 
-🔍 Convert documents into vector embeddings
 
-❓ Ask questions based on document content
+🚀 Introduction
 
-💬 Retrieve accurate answers using similarity search
+This project implements a fully local Retrieval-Augmented Generation (RAG) document question-answering system, built using:
 
-🚫 Run without any external API calls (No OpenAI keys required)
+LlamaIndex for indexing & retrieval
 
-🐳 Package and run the entire app using Docker
+HuggingFace BGE embeddings (offline, no API required)
 
-This is the first project in my multi-level RAG (Retrieval-Augmented Generation) series, starting from basics and moving toward advanced RAG pipelines.
+Gradio for an easy interactive UI
+
+Docker for containerized deployment
+
+It demonstrates how to build a practical, production-ready, offline Q&A system — ideal for beginners, freshers, and engineers building hands-on projects for their portfolio.
+
+🏷️ Tech Badges
+<p> <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python" /> <img src="https://img.shields.io/badge/LlamaIndex-RAG-orange?logo=semanticweb" /> <img src="https://img.shields.io/badge/HuggingFace-Embeddings-yellow?logo=huggingface" /> <img src="https://img.shields.io/badge/Gradio-WebUI-green?logo=googlechrome" /> <img src="https://img.shields.io/badge/Docker-Containerized-blue?logo=docker" /> </p>
+📚 Table of Contents
+
+Introduction
+
+Architecture Diagram
+
+Features
+
+Project Structure
+
+Screenshots
+
+How to Run
+
+How It Works
+
+Purpose of This Project
+
+Next Steps
+
+🧱 Architecture Diagram (Project 1)
+
+✔️ Your architecture image stays exactly the same.
+(Do not change or re-upload — GitHub is displaying it correctly now.)
 
 🚀 Features
 
-
 🔹 1. Local Embedding-Based Search
-
-Uses the BAAI/bge-small-en-v1.5 embedding model from HuggingFace, running completely offline.
+Uses BAAI/bge-small-en-v1.5 for fully offline vector generation.
 
 🔹 2. Document Indexing
+Reads files → embeds text → stores in VectorStoreIndex.
 
-Uploaded documents are read using SimpleDirectoryReader, converted into vector representations, and stored in a VectorStoreIndex.
-
-🔹 3. Interactive UI with Gradio
-
-User-friendly interface to:
-
-Upload a file
-
-Index the content
-
-Ask natural language questions
-
-View answers
+🔹 3. Interactive Gradio UI
+Upload → Index → Ask Questions → Get Answers.
 
 🔹 4. No LLM Required
+Pure embedding retrieval:
+✔️ Fast ✔️ Free ✔️ Private ✔️ Offline
 
-The system performs pure embedding similarity search, making it:
+🔹 5. Docker Support
+Build & run anywhere with one command.
 
-✔️ Fast
-✔️ Lightweight
-✔️ Free
-✔️ Privacy-safe
-
-🔹 5. Dockerized
-
-The entire app can be built and deployed using:
-
-docker build -t doc-qa-basic .
-docker run -p 7860:7860 doc-qa-basic
-
-🏗️ Tech Stack
-Component	Purpose
-Python 3.10+	Core implementation
-LlamaIndex	Document loading & vector index
-HuggingFace Embeddings	Local embedding model
-Gradio	Web UI
-Docker	Containerization
 📁 Project Structure
 project-basic-rag/
 │── app.py
@@ -75,17 +74,18 @@ project-basic-rag/
 │── README.md
 │── docs/
 │── screenshots/
-│     ├── 01-folder-structure.png
-│     ├── 02-index-document.png
-│     ├── 03-indexed-status.png
-│     ├── 04-query-and-answer.png
+│   ├── 01-folder-structure.png
+│   ├── 02-index-document.png
+│   ├── 03-indexed-status.png
+│   ├── 04-query-and-answer.png
+│   ├── RAG_architecture.png   <-- used in README
 
 🖼️ Screenshots
 Step	Image
 📁 Project Structure	screenshots/01-folder-structure.png
-📤 Document Upload & Index	screenshots/02-index-document.png
+📤 Upload & Index	screenshots/02-index-document.png
 📌 Index Confirmation	screenshots/03-indexed-status.png
-❓ Query & Final Answer	screenshots/04-query-and-answer.png
+❓ Query & Response	screenshots/04-query-and-answer.png
 ▶️ How to Run
 1️⃣ Install Dependencies
 pip install -r requirements.txt
@@ -94,52 +94,45 @@ pip install -r requirements.txt
 python app.py
 
 
-Then open: http://localhost:7860
+Access UI at: http://localhost:7860
 
-3️⃣ Using Docker
+3️⃣ Run with Docker
 docker build -t doc-qa-basic .
 docker run -p 7860:7860 doc-qa-basic
 
 🧠 How It Works (High-Level Architecture)
 
-Upload Document → Read via LlamaIndex
+Upload Document → LlamaIndex reads text
 
-Embed Document → Convert text into vectors using BGE-small
+Convert text into embeddings (BGE-small)
 
-Store in Vector Index → Efficient similarity search
+Store vectors in an index
 
-User Query → Convert question → embedding
+Convert user question → embedding
 
-Similarity Search → Retrieve relevant chunks
+Perform similarity search
 
-Return Answer → Pure retrieval, no LLM generation
+Return best-matching answer (pure retrieval)
 
 🎯 Purpose of This Project
 
-This project is designed to:
+This project is designed to help you:
 
-Build foundational understanding of RAG systems
+Understand core RAG workflows
 
-Learn how vector embeddings work
+Learn vector search, embeddings, and indexing
 
-Build a local, offline, and free Q&A pipeline
+Build offline, local GenAI tools
 
-Prepare for advanced RAG architectures in Project 2 & 3
+Prepare for advanced RAG architectures
 
-Strengthen portfolio for AI/ML Engineer, Data Engineer, and GenAI Engineer roles
+Strengthen your resume with practical AI/ML projects
 
-It is ideal for a fresher showcasing practical hands-on experience with Retrieval-Augmented Generation.
+Perfect for freshers & early-career engineers.
 
 🧩 Next Steps (Upcoming Projects)
-
-Project 2: Multi-document RAG with metadata filtering
-
-Project 3: Hybrid RAG + LLM (Generation + Retrieval)
-
-Project 4: Enterprise-level Vector Database (Pinecone / ChromaDB)
-
-Project 5: RAG with rerankers, chunking strategies, and evaluation
-
-📜 License
-
-This project is open-source and free to use for learning and portfolio purposes.
+Project	Description
+Project 2	Multi-document RAG with metadata filtering
+Project 3	Hybrid RAG + LLM (retrieval + generation)
+Project 4	Enterprise vector DB (Pinecone / Chroma)
+Project 5	Rerankers, chunking strategies, evaluation
