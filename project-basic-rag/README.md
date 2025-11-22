@@ -23,30 +23,16 @@ It demonstrates how to build a practical, production-ready, offline Q&A system �
 
 🏷️ Tech Badges
 <p> <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python" /> <img src="https://img.shields.io/badge/LlamaIndex-RAG-orange?logo=semanticweb" /> <img src="https://img.shields.io/badge/HuggingFace-Embeddings-yellow?logo=huggingface" /> <img src="https://img.shields.io/badge/Gradio-WebUI-green?logo=googlechrome" /> <img src="https://img.shields.io/badge/Docker-Containerized-blue?logo=docker" /> </p>
-📚 Table of Contents
 
-Introduction
-
-Architecture Diagram
-
-Features
-
-Project Structure
-
-Screenshots
-
-How to Run
-
-How It Works
-
-Purpose of This Project
-
-Next Steps
-
-🧱 Architecture Diagram (Project 1)
-
-✔️ Your architecture image stays exactly the same.
-(Do not change or re-upload — GitHub is displaying it correctly now.)
+## 📑 Table of Contents
+- [Introduction](#introduction)
+- [Architecture Diagram (Project 1)](#architecture-diagram-project-1)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Screenshots](#screenshots)
+- [How to Run](#how-to-run)
+- [How It Works](#how-it-works)
+- [Purpose of This Project](#purpose-of-this-project)
 
 🚀 Features
 
@@ -66,7 +52,6 @@ Pure embedding retrieval:
 🔹 5. Docker Support
 Build & run anywhere with one command.
 
-📁 Project Structure
 project-basic-rag/
 │── app.py
 │── Dockerfile
@@ -80,15 +65,14 @@ project-basic-rag/
 │   ├── 04-query-and-answer.png
 │   ├── RAG_architecture.png   <-- used in README
 
-🖼️ Screenshots
-Step	Image
-📁 Project Structure	screenshots/01-folder-structure.png
-📤 Upload & Index	screenshots/02-index-document.png
-📌 Index Confirmation	screenshots/03-indexed-status.png
-❓ Query & Response	screenshots/04-query-and-answer.png
-▶️ How to Run
-1️⃣ Install Dependencies
-pip install -r requirements.txt
+
+| Step                  | Image                                 |
+| --------------------- | ------------------------------------- |
+| 📁 Project Structure  | `screenshots/01-folder-structure.png` |
+| 📤 Upload & Index     | `screenshots/02-index-document.png`   |
+| 📌 Index Confirmation | `screenshots/03-indexed-status.png`   |
+| ❓ Query & Response    | `screenshots/04-query-and-answer.png` |
+
 
 2️⃣ Start the App
 python app.py
