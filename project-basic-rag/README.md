@@ -100,6 +100,7 @@ project-basic-rag/
 
 ### 1️⃣ Install Dependencies
 pip install -r requirements.txt
+
 2️⃣ Start the App
 python app.py
 Then open:
