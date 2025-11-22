@@ -11,8 +11,6 @@ This repo is designed to showcase:
 - Deployment using **Docker**
 - Clean, documented, resume-ready project structure
 
-This makes your portfolio significantly stronger for AI/ML, Cloud, and Software Engineering roles.
-
 ---
 
 ## 🧑‍💻 Maintainer
