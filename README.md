@@ -9,9 +9,8 @@ This repo is designed to showcase:
 - Deployment using **Docker**
 - Clean, documented, resume-ready project structure
 
-## 🧱 Architecture Diagram (Project 1)
 
-![Basic RAG Architecture](project-basic-rag/screenshots/rag_architecture.png)
+![Basic RAG Architecture](screenshots/RAG_architecture.png)
 
 
 ## 🧑‍💻 Maintainer
