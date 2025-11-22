@@ -12,6 +12,7 @@
 ---
 
 ## 📑 Table of Contents
+
 - [Introduction](#introduction)
 - [Architecture Diagram (Project 1)](#architecture-diagram-project-1)
 - [Features](#features)
@@ -20,6 +21,7 @@
 - [How to Run](#how-to-run)
 - [How It Works](#how-it-works)
 - [Purpose of This Project](#purpose-of-this-project)
+
 
 ---
 
