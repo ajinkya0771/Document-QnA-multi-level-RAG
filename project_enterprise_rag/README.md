@@ -1,163 +1,140 @@
-📄 Project 2 — Enterprise Document Q&A System (Advanced RAG)
+# Project 2 — Enterprise Document Q&A System (Advanced RAG)
 
-Tech Stack: LlamaIndex · LlamaParse · MixedBread · Groq · Python · Vector Stores · Gradio
-Level: Enterprise / Production-style RAG Pipeline
+<p>
+<img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python" />
+<img src="https://img.shields.io/badge/LlamaIndex-RAG-orange" />
+<img src="https://img.shields.io/badge/LlamaParse-Parsing-purple" />
+<img src="https://img.shields.io/badge/MixedBread-Embeddings-yellow" />
+<img src="https://img.shields.io/badge/Groq-LLM-black" />
+<img src="https://img.shields.io/badge/Gradio-WebUI-green" />
+<img src="https://img.shields.io/badge/Docker-Containerized-blue?logo=docker" />
+</p>
 
-🔍 Overview
+---
 
-This project implements an enterprise-grade Retrieval-Augmented Generation (RAG) system for document question answering.
+## Table of Contents
 
-Unlike basic RAG systems, this pipeline demonstrates:
+- [Overview](#overview)
+- [Architecture Diagram (Project 2)](#architecture-diagram-project-2)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Execution Flow (Screenshots)](#execution-flow-screenshots)
+- [How to Run](#how-to-run)
+- [Purpose of This Project](#purpose-of-this-project)
+- [Whats Next](#whats-next)
 
-High-quality document parsing
+---
 
-Structured data normalization
+## Overview
 
-Persistent vector storage
+This project implements an **enterprise-grade Retrieval-Augmented Generation (RAG)** system for document question answering.
 
-Production-style query engine design
+Unlike basic RAG pipelines, this system demonstrates:
 
-End-to-end execution proof with logs and UI
+- High-quality document parsing
+- Structured chunking and normalization
+- Persistent vector storage
+- Production-style retrieval and query engine
+- End-to-end execution proof (UI + logs)
 
-The system enables users to upload large documents (PDFs), index them into a vector store, and query them using a Groq-powered LLM with MixedBread embeddings.
+---
 
-🧠 Key Capabilities
+## Architecture Diagram (Project 2)
 
-📄 Advanced Document Parsing using LlamaParse
+![Enterprise RAG Architecture](./screenshots/enterprise_rag_architecture.png)
 
-🧩 Structured Chunking & Normalization (JSON-based)
+---
 
-🔢 High-quality Embeddings via MixedBread (with HF fallback)
+## Features
 
-🗂 Persistent Vector Store (local disk)
+### 1. Advanced Document Parsing
+Uses **LlamaParse** to extract structured content (text, tables, metadata) from PDFs.
 
-🔍 Context-aware Retrieval using LlamaIndex
+### 2. Structured Chunking and Normalization
+Parsed documents are normalized into **JSON-based chunks** to ensure reliable indexing and retrieval.
 
-🤖 LLM-powered Answer Generation via Groq
+### 3. High-Quality Embeddings
+Uses **MixedBread embeddings** for semantic search, with fallback support for HuggingFace embeddings.
 
-🖥 Interactive UI for upload, indexing, and querying
+### 4. Persistent Vector Store
+Embeddings are stored on disk, enabling:
+- Reuse across sessions
+- Faster query performance
+- Enterprise-style persistence
 
-🧾 Execution Evidence (logs, API usage, terminal proof)
+### 5. Context-Aware Retrieval
+Retrieval is handled using **LlamaIndex query engines** with structured context injection.
 
-🏗️ Architecture (High Level)
-PDF / TXT Document
-        ↓
-LlamaParse (High-Quality Parsing)
-        ↓
-Structured Output (Text + Tables + Metadata)
-        ↓
-Normalized JSON Chunks
-        ↓
-MixedBread Embeddings
-        ↓
-Persistent Vector Store
-        ↓
-Query Engine (LlamaIndex)
-        ↓
-Groq LLM Response
-        ↓
-UI / Terminal Output
+### 6. LLM-Powered Answer Generation
+Final answers are generated using **Groq LLM**, grounded strictly on retrieved context.
 
-📁 Project Structure
+### 7. Interactive UI
+Gradio-based UI supports:
+- Document upload
+- Index creation
+- Query execution
+- Answer visualization
+
+---
+
+## Project Structure
+```
 project_enterprise_rag/
-│── embeddings/        # Embedding logic & configs
-│── ingestion/         # Parsing, validation, normalization
-│── llm_chain/         # Groq LLM client & prompt logic
-│── rag/               # Query engine & retrieval logic
-│── storage/           # Persistent vector store files
-│── frontend/          # UI components
-│── screenshots/       # End-to-end execution proof
-│── app.py             # UI entry point
-│── api.py             # API entry point (future FastAPI)
-│── Dockerfile         # Containerization support
+│── embeddings/
+│── ingestion/
+│── llm_chain/
+│── rag/
+│── storage/
+│── frontend/
+│── screenshots/
+│── app.py
+│── api.py
+│── Dockerfile
 │── requirements.txt
 │── README.md
+```
 
-🧪 Execution Flow — Step-by-Step (Screenshots)
+---
 
-The following screenshots demonstrate the complete enterprise RAG pipeline, executed end to end.
+## Execution Flow (Screenshots)
 
-🔹 Setup & Configuration
+All screenshots are available in the `screenshots/` folder  
+**in strict pipeline order**, including:
 
-Folder Structure (VS Code)
+- API key configuration
+- Document parsing (before and after)
+- Structured JSON output
+- Vector store creation
+- Embedding and indexing
+- Query execution
+- UI interaction
+- Groq response logs
 
-MixedBread API Key Configuration
+These screenshots serve as **execution evidence**, not just visuals.
 
-Groq API Key Configuration
+---
 
-LlamaCloud API Key Setup
+## How to Run
 
-🔹 Document Parsing (LlamaParse)
-
-Raw Document Before Parsing
-
-LlamaParse Playground
-
-LlamaParse Code Snippet (Python – Basic)
-
-LlamaParse Code Snippet (Python – Full)
-
-Parsed Structured Output
-
-Normalized JSON Chunks
-
-Table Layout Validation
-
-🔹 Vector Store Creation
-
-Vector Store Created (Empty)
-
-Add Files Dialog
-
-Parsing Strategy Selection
-
-Store After Upload (Processing → Completed)
-
-🔹 Embeddings & Indexing
-
-Embedding Playground Output
-
-Vector Index Created & Persisted (Local)
-
-Vector Store After Indexing
-
-🔹 Query & Answering
-
-Query Engine Code Implementation
-
-RAG Query Test (Terminal)
-
-Uploading Document via UI
-
-Chat Response (Answer Generation)
-
-Groq Logs (Response Evidence)
-
-📂 All screenshots are available in the /screenshots folder in sequential order.
-
-▶️ How to Run Locally
-1️⃣ Install Dependencies
+```bash
+# 1. Install dependencies
 pip install -r requirements.txt
 
-2️⃣ Set Environment Variables
-
-Create a .env file:
-
+# 2. Create a .env file
 GROQ_API_KEY=your_key_here
 MIXEDBREAD_API_KEY=your_key_here
 LLAMACLOUD_API_KEY=your_key_here
 
-3️⃣ Run the Application
+# 3. Run the application
 python app.py
-
-
-Open:
+```
+Open in browser:
 
 http://localhost:7860
 
-🎯 Purpose of This Project
+## Purpose of This Project
 
-This project is designed to showcase real enterprise RAG skills, including:
+This project is designed to demonstrate real-world enterprise RAG skills, including:
 
 Production-style data ingestion
 
@@ -169,23 +146,23 @@ Vector persistence and retrieval
 
 LLM orchestration
 
-Debugging with logs and execution evidence
+Debugging using logs and execution evidence
 
-It is intentionally built to go beyond tutorials and reflect how RAG systems are implemented in real-world AI teams.
+This goes beyond tutorials and reflects how RAG systems are built in real AI teams.
 
-🚀 What’s Next (Planned Enhancements)
+## Whats Next
 
-✅ FastAPI-based backend API
+FastAPI-based backend API
 
-✅ Fully Dockerized deployment
+Fully Dockerized deployment
 
-⏭ Multi-document ingestion
+Multi-document ingestion
 
-⏭ Authentication & rate limiting
+Authentication and rate limiting
 
-⏭ Cloud deployment (optional)
+Optional cloud deployment
 
-🧑‍💻 Author
+Author
 
 Ajinkya Dhote
 AI / ML Engineer (Fresher)
